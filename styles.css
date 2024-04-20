@@ -1,0 +1,153 @@
+/*
+ =========
+global styles
+==========
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.3px;
+}
+body{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+/*
+ =========
+styling elements
+==========
+ */
+
+ /* *******************header section*********** */
+
+.header{
+    min-height: 100vh;
+    background-color: hsl(0 0% 0%);
+    padding:64px 16px;
+  
+}
+.header .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .heading{
+    font-size: 1.8rem;
+}
+.header .counter-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header .counter-box .count{
+    font-weight: bold;
+    font-size: 1.35rem;
+}
+
+.header .counter-box p:nth-child(1){
+    font-size: 1.3rem;
+    padding-block:10px;
+    width: fit-content;
+    border-bottom: 2px solid white;
+}
+
+.header .counter-box p:nth-child(2){
+    font-size: 1rem;
+    padding-block:10px;
+    color: rgb(253, 101, 101); 
+    display: none;
+}
+
+.header .counter-box p:nth-child(2).active{
+  display: initial;
+}
+
+
+.header .buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.header .buttons .btn{
+   font-size: 1.2rem;
+   color: rgb(81, 77, 77);
+   padding:8px 32px;
+   background-color: white;
+   transition: background-color .2s ease;
+}
+
+.header .buttons .btn.clear{
+    padding:8px 56px;
+   background-color: transparent;
+   color: rgb(225, 222, 222);
+   border: 1px solid white;
+   display: none;
+ }
+
+ .header .buttons .btn.clear.active{
+  display: initial;
+ }
+
+ /* ======
+ medias
+ ====== */
+
+ @media (pointer:fine){
+    .header .buttons .btn:hover{
+        background-color: rgb(233, 228, 228);
+     }
+     .header .buttons .btn:active{
+        background-color: rgb(255, 255, 255);
+     }
+     .header .buttons .btn.clear:hover{
+        background-color: rgb(234, 229, 229);
+        color:rgb(81, 77, 77)
+     }
+     .header .buttons .btn.clear:active{
+        background-color: rgb(255, 255, 255);
+        color:rgb(81, 77, 77)
+     }
+     
+
+ }
+
+@media (min-width:776px){
+    .header{
+        padding:64px 48px;
+    }
+    .header .wrapper{
+        align-items: start;
+    }
+    .header .heading{
+        font-size: 3rem;
+    }   
+
+    .header .buttons {
+        justify-content: start;
+       
+    }
+    body{
+        text-align: left;
+    }
+    
+    
+}
+
+
+
+
+
