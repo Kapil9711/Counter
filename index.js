@@ -6,7 +6,7 @@ const error = document.querySelector("#error");
 const handleDecrement = (currentValue) => {
   --currentValue;
 
-  if (currentValue <= 0) clrBtn.classList.remove("active");
+  if (currentValue <= 1) clrBtn.classList.remove("active");
   if (currentValue < 0) {
     error.classList.add("active");
     return;
@@ -17,10 +17,8 @@ const handleDecrement = (currentValue) => {
 
 const handleIncrement = (currentValue) => {
   ++currentValue;
-  if (currentValue > 0) {
-    error.classList.remove("active");
-    clrBtn.classList.add("active");
-  }
+  if (currentValue > 0)  error.classList.remove("active");
+  if(currentValue > 1)  clrBtn.classList.add("active");
   count.innerHTML = currentValue;
 };
 
